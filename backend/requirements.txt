@@ -1,0 +1,4 @@
+flask
+flask-cors
+gunicorn
+pymupdf>=1.24
