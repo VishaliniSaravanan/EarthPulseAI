@@ -14,8 +14,9 @@ services:
         value: 3.11.0
 
   # ── Frontend (React/Vite static site) ──────────────────────
-  - type: static
+  - type: web
     name: earthpulse-ai-frontend
+    runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
