@@ -14,13 +14,11 @@ services:
         value: 3.11.0
 
   # ── Frontend (React/Vite static site) ──────────────────────
-  - type: web
+  - type: static
     name: earthpulse-ai-frontend
-    runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    plan: free
     envVars:
       # IMPORTANT: Replace with your actual backend Render URL after deploying backend
       - key: VITE_API_BASE_URL
