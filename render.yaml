@@ -3,7 +3,7 @@ services:
   - type: web
     name: earthpulse-ai-backend
     runtime: python
-    rootDir: EarthPulse-AI-Lightweight/backend
+    rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120
     plan: free
@@ -17,7 +17,7 @@ services:
   - type: web
     name: earthpulse-ai-frontend
     runtime: static
-    rootDir: EarthPulse-AI-Lightweight/frontend
+    rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     plan: free
